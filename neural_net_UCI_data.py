@@ -1,7 +1,6 @@
 from typing import Tuple
 from neural import *
 
-
 def parse_line(line: str) -> Tuple[List[float], List[float]]:
     """Splits line of CSV into inputs and output (transormfing output as appropriate)
 
@@ -54,4 +53,4 @@ nn = NeuralNet(13, 3, 1)
 nn.train(td, iters=100_000, print_interval=1000, learning_rate=0.1)
 
 for i in nn.test_with_expected(td):
-    print(f"desired: {i[1]}, actual:")
+    print(f"desired: {i[1]}, actual: {i}")
